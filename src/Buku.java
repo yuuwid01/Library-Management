@@ -9,6 +9,20 @@ public class Buku {
     Penulis penulis;
     Penerbit penerbit;
 
+    // Constructor
+    public Buku() {
+    }
+
+    // Constructor
+    public Buku(int idBuku, String judulBuku, int jmlHalaman, String tanggalTerbit) {
+        this.idBuku = idBuku;
+        this.judulBuku = judulBuku;
+        this.jmlHalaman = jmlHalaman;
+        this.tanggalTerbit = tanggalTerbit;
+        this.penulis = null;
+        this.penerbit = null;
+    }
+
     // Constructor dengan Parameter
     public Buku(int idBuku, String judulBuku,
             int jmlHalaman, String tanggalTerbit,

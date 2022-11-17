@@ -6,6 +6,17 @@ public class Staff {
     String nik;
     String password;
 
+    // Constructor
+    public Staff() {
+    }
+
+    // Constructor
+    public Staff(String namaStaff, String nik, String password) {
+        this.namaStaff = namaStaff;
+        this.nik = nik;
+        this.password = password;
+    }
+
     // Method
     public void dataStaff() {
         System.out.println("Nama Staff      : " + namaStaff);
