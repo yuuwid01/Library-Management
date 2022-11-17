@@ -1,8 +1,7 @@
 
 // Class Entitas
-public class Penerbit {
+public class Penerbit extends Identitas {
     // Atribut Class Penerbit
-    String namaPenerbit;
     String alamatPenerbit;
 
     // Constructor
@@ -11,19 +10,19 @@ public class Penerbit {
 
     // Constructor
     public Penerbit(String namaPenerbit) {
-        this.namaPenerbit = namaPenerbit;
+        this.nama = namaPenerbit;
         this.alamatPenerbit = "-";
     }
 
     // Constructor
     public Penerbit(String namaPenerbit, String alamatPenerbit) {
-        this.namaPenerbit = namaPenerbit;
+        this.nama = namaPenerbit;
         this.alamatPenerbit = alamatPenerbit;
     }
 
     // Method
     public void dataPenerbit() {
-        System.out.println("Nama Penerbit   : " + namaPenerbit);
+        System.out.println("Nama Penerbit   : " + nama);
         System.out.println("Alamat Penerbit : " + alamatPenerbit);
     }
 }

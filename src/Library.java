@@ -27,7 +27,7 @@ public class Library {
 
     public static Buku findBukuById(int id) {
         for (Buku buku : bukuList) {
-            if (buku.idBuku == id) {
+            if (buku.idKoleksi == id) {
                 return buku;
             }
         }
@@ -45,7 +45,7 @@ public class Library {
 
     private static int indexData(Buku buku) {
         for (int i = 0; i < bukuList.size(); i++) {
-            if (bukuList.get(i).idBuku == buku.idBuku) {
+            if (bukuList.get(i).idKoleksi == buku.idKoleksi) {
                 return i;
             }
         }

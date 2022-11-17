@@ -9,16 +9,16 @@ public class BukuPage {
         Penerbit penerbit = buku.penerbit;
 
         System.out.println("---------------------------------------");
-        System.out.println("ID Buku        : " + buku.idBuku);
+        System.out.println("ID Buku        : " + buku.idKoleksi);
         System.out.println("Judul Buku     : " + buku.judulBuku);
         System.out.println("Jumlah Halaman : " + buku.jmlHalaman);
         if (penulis != null) {
-            System.out.println("Nama Penulis   : " + penulis.namaPenulis);
+            System.out.println("Nama Penulis   : " + penulis.nama);
         } else {
             System.out.println("Nama Penulis   : Tidak diketahui");
         }
         if (penerbit != null) {
-            System.out.println("Penerbit       : " + penerbit.namaPenerbit);
+            System.out.println("Penerbit       : " + penerbit.nama);
         } else {
             System.out.println("Penerbit       : Tidak diketahui");
         }
@@ -146,15 +146,15 @@ public class BukuPage {
     }
 
     public void editBuku() {
-        int idBuku;
+        int idKoleksi;
 
         System.out.println("=============== EDIT BUKU =============");
 
         System.out.print("Masukan ID Buku: ");
-        idBuku = input.nextInt();
+        idKoleksi = input.nextInt();
         input.nextLine();
 
-        Buku buku = Library.findBukuById(idBuku);
+        Buku buku = Library.findBukuById(idKoleksi);
 
         if (buku != null) {
             editBuku(buku);
@@ -180,15 +180,15 @@ public class BukuPage {
     }
 
     public void hapusBuku() {
-        int idBuku;
+        int idKoleksi;
 
         System.out.println("============== HAPUS  BUKU ============");
 
         System.out.print("Masukan ID Buku: ");
-        idBuku = input.nextInt();
+        idKoleksi = input.nextInt();
         input.nextLine();
 
-        Buku buku = Library.findBukuById(idBuku);
+        Buku buku = Library.findBukuById(idKoleksi);
 
         if (buku != null) {
             hapusBuku(buku);

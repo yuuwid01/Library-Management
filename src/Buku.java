@@ -1,14 +1,12 @@
 
 // Class Entitas
-public class Buku {
+public class Buku extends Koleksi {
     // Atribut Class Buku
-    int idBuku;
     String judulBuku;
     int jmlHalaman;
     String tanggalTerbit;
     Penulis penulis;
     Penerbit penerbit;
-    boolean status;
 
     // Constructor
     public Buku() {
@@ -42,7 +40,7 @@ public class Buku {
         if (Library.bukuList.size() == 0) {
             // Jika ArrayList buku MASIH Kosong,
             // maka atur idBuku menjadi 1
-            this.idBuku = 1;
+            this.idKoleksi = 1;
         } else {
             // Jika ArrayList Buku TIDAK Kosong, maka
 
@@ -53,16 +51,16 @@ public class Buku {
             Buku bukuTerakhirDalamList = Library.bukuList.get(indexTerakhirDalamList);
 
             // Ambil idBuku pada Object Buku terakhir
-            int idBukuTerakhir = bukuTerakhirDalamList.idBuku;
+            int idBukuTerakhir = bukuTerakhirDalamList.idKoleksi;
 
             // Id Buku yang baru
-            this.idBuku = idBukuTerakhir + 1;
+            this.idKoleksi = idBukuTerakhir + 1;
         }
     }
 
     // Method
     public void dataBuku() {
-        System.out.println("ID Buku         : " + idBuku);
+        System.out.println("ID Buku         : " + idKoleksi);
         System.out.println("Judul Buku      : " + judulBuku);
         System.out.println("Jumlah Halaman  : " + jmlHalaman);
         System.out.println("Tanggal Terbit  : " + tanggalTerbit);

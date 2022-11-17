@@ -1,10 +1,8 @@
 
 // Class Entitas
-public class Staff {
+public class Staff extends Akun {
     // Atribut Class Staff
     String namaStaff;
-    String nik;
-    String password;
 
     // Constructor
     public Staff() {
