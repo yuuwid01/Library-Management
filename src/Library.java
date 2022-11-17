@@ -5,6 +5,17 @@ public class Library {
     static ArrayList<Buku> bukuList = new ArrayList<>();
     static ArrayList<Staff> staffList = new ArrayList<>();
 
+    public static void initialBuku() {
+        Penulis penulis = new Penulis("Agus Budi Cahyani");
+        Penerbit penerbit = new Penerbit("PT Cetak Buku");
+        Buku buku1 = new Buku("Judul 1", 123, "01/01/2000", penulis, penerbit, true);
+
+        Buku buku2 = new Buku("Judul 2", 200, "01/01/2000", null, null, true);
+
+        bukuList.add(buku1);
+        bukuList.add(buku2);
+    }
+
     public static Staff findStaff(String nik) {
         for (Staff staff : staffList) {
             if (staff.nik.equals(nik)) {
