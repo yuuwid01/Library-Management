@@ -1,3 +1,4 @@
+import enitity.Staff;
 
 // Class Core (Inti)
 public class Auth {
@@ -15,7 +16,7 @@ public class Auth {
         Staff staff = Library.findStaff(nik);
 
         if (staff != null) {
-            if (staff.password.equals(password)) {
+            if (staff.getPassword().equals(password)) {
                 staffLogged = staff;
                 return true;
             } else {

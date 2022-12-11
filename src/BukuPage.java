@@ -1,28 +1,31 @@
 
 import java.util.Scanner;
 
+import enitity.Penerbit;
+import enitity.Penulis;
+
 public class BukuPage {
     private Scanner input = new Scanner(System.in);
 
     private void lihatBuku(Buku buku) {
-        Penulis penulis = buku.penulis;
-        Penerbit penerbit = buku.penerbit;
+        Penulis penulis = buku.getPenulis();
+        Penerbit penerbit = buku.getPenerbit();
 
         System.out.println("---------------------------------------");
-        System.out.println("ID Buku        : " + buku.idKoleksi);
-        System.out.println("Judul Buku     : " + buku.judulBuku);
-        System.out.println("Jumlah Halaman : " + buku.jmlHalaman);
+        System.out.println("ID Buku        : " + buku.getIdKoleksi());
+        System.out.println("Judul Buku     : " + buku.getJudulBuku());
+        System.out.println("Jumlah Halaman : " + buku.getJmlHalaman());
         if (penulis != null) {
-            System.out.println("Nama Penulis   : " + penulis.nama);
+            System.out.println("Nama Penulis   : " + penulis.getNama());
         } else {
             System.out.println("Nama Penulis   : Tidak diketahui");
         }
         if (penerbit != null) {
-            System.out.println("Penerbit       : " + penerbit.nama);
+            System.out.println("Penerbit       : " + penerbit.getNama());
         } else {
             System.out.println("Penerbit       : Tidak diketahui");
         }
-        System.out.println("Tanggal Terbit : " + buku.tanggalTerbit);
+        System.out.println("Tanggal Terbit : " + buku.getTanggalTerbit());
         System.out.println("---------------------------------------");
 
     }
@@ -100,14 +103,14 @@ public class BukuPage {
         switch (pilihEdit) {
             case 1:
                 String judulBukuBaru;
-                System.out.println("Judul Buku          : " + buku.judulBuku);
+                System.out.println("Judul Buku          : " + buku.getJudulBuku());
                 System.out.print("Masukan Judul Baru  : ");
                 judulBukuBaru = input.nextLine();
                 buku.setJudulBuku(judulBukuBaru);
                 break;
             case 2:
                 int jmlHalaman;
-                System.out.println("Jumlah Halaman              : " + buku.jmlHalaman);
+                System.out.println("Jumlah Halaman              : " + buku.getJmlHalaman());
                 System.out.print("Masukan Jumlah Halaman Baru : ");
                 jmlHalaman = input.nextInt();
                 input.nextLine();

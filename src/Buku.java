@@ -1,12 +1,15 @@
+import enitity.Koleksi;
+import enitity.Penerbit;
+import enitity.Penulis;
 
 // Class Entitas
 public class Buku extends Koleksi {
     // Atribut Class Buku
-    String judulBuku;
-    int jmlHalaman;
-    String tanggalTerbit;
-    Penulis penulis;
-    Penerbit penerbit;
+    private String judulBuku;
+    private int jmlHalaman;
+    private String tanggalTerbit;
+    private Penulis penulis;
+    private Penerbit penerbit;
 
     // Constructor
     public Buku() {
@@ -66,14 +69,44 @@ public class Buku extends Koleksi {
         System.out.println("Tanggal Terbit  : " + tanggalTerbit);
     }
 
-    // Setter
+    public String getJudulBuku() {
+        return judulBuku;
+    }
+
     public void setJudulBuku(String judulBuku) {
         this.judulBuku = judulBuku;
     }
 
-    // Setter
+    public int getJmlHalaman() {
+        return jmlHalaman;
+    }
+
     public void setJmlHalaman(int jmlHalaman) {
         this.jmlHalaman = jmlHalaman;
+    }
+
+    public String getTanggalTerbit() {
+        return tanggalTerbit;
+    }
+
+    public void setTanggalTerbit(String tanggalTerbit) {
+        this.tanggalTerbit = tanggalTerbit;
+    }
+
+    public Penulis getPenulis() {
+        return penulis;
+    }
+
+    public void setPenulis(Penulis penulis) {
+        this.penulis = penulis;
+    }
+
+    public Penerbit getPenerbit() {
+        return penerbit;
+    }
+
+    public void setPenerbit(Penerbit penerbit) {
+        this.penerbit = penerbit;
     }
 
 }

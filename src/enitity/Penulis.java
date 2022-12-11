@@ -1,8 +1,9 @@
+package enitity;
 
 // Class Entitas
 public class Penulis extends Identitas {
     // Atribut Class Penulis
-    String emailPenulis;
+    private String emailPenulis;
 
     // Constructor
     public Penulis() {
@@ -24,6 +25,14 @@ public class Penulis extends Identitas {
     public void dataPenulis() {
         System.out.println("Nama Penulis    : " + nama);
         System.out.println("Email Penulis   : " + emailPenulis);
+    }
+
+    public String getEmailPenulis() {
+        return emailPenulis;
+    }
+
+    public void setEmailPenulis(String emailPenulis) {
+        this.emailPenulis = emailPenulis;
     }
 
 }

@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+import enitity.Penerbit;
+import enitity.Penulis;
+import enitity.Staff;
+
 // Class Core (Inti)
 public class Library {
     static ArrayList<Buku> bukuList = new ArrayList<>();
@@ -18,7 +22,7 @@ public class Library {
 
     public static Staff findStaff(String nik) {
         for (Staff staff : staffList) {
-            if (staff.nik.equals(nik)) {
+            if (staff.getNik().equals(nik)) {
                 return staff;
             }
         }
@@ -27,7 +31,7 @@ public class Library {
 
     public static Buku findBukuById(int id) {
         for (Buku buku : bukuList) {
-            if (buku.idKoleksi == id) {
+            if (buku.getIdKoleksi() == id) {
                 return buku;
             }
         }
@@ -36,7 +40,7 @@ public class Library {
 
     public static Buku findBukuByTitle(String title) {
         for (Buku buku : bukuList) {
-            if (buku.judulBuku.contains(title)) {
+            if (buku.getJudulBuku().contains(title)) {
                 return buku;
             }
         }
@@ -45,7 +49,7 @@ public class Library {
 
     private static int indexData(Buku buku) {
         for (int i = 0; i < bukuList.size(); i++) {
-            if (bukuList.get(i).idKoleksi == buku.idKoleksi) {
+            if (bukuList.get(i).getIdKoleksi() == buku.getIdKoleksi()) {
                 return i;
             }
         }

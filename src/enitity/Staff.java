@@ -1,8 +1,9 @@
+package enitity;
 
 // Class Entitas
 public class Staff extends Akun {
     // Atribut Class Staff
-    String namaStaff;
+    private String namaStaff;
 
     // Constructor
     public Staff() {
@@ -21,4 +22,13 @@ public class Staff extends Akun {
         System.out.println("NIK Staff       : " + nik);
         System.out.println("Password        : " + password);
     }
+
+    public String getNamaStaff() {
+        return namaStaff;
+    }
+
+    public void setNamaStaff(String namaStaff) {
+        this.namaStaff = namaStaff;
+    }
+
 }

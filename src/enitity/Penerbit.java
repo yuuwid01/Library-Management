@@ -1,4 +1,4 @@
-
+package enitity;
 // Class Entitas
 public class Penerbit extends Identitas {
     // Atribut Class Penerbit
